@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>gmap</title>
+	<link rel="stylesheet" type="text/css" href="layout.css">
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV_6P86xWeiV600iReTBkL3ng-rPQTVs4&callback=initMap"   type="text/javascript"></script>
+	
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	
+	<script type="text/javascript">
+	
+		var loadMap = function () {
+			var location = { lat: <%=lat%>, lng: <%=lon%>};
+			var map = new google.maps.Map(document.getElementById("map"), {
+				zoom: 16,
+				center: location
+			});
+			var map = new google.maps.Marker({
+				position: location,
+				map: map,
+				
+			});
+		};
+		window.onload = loadMap;
+		
+	</script>
+</head>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+	<div class="w3-container" id="map" style="width:500px;height:500px;">
+</body>
+
+</html>

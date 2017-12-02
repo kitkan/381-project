@@ -1,0 +1,27 @@
+<html>
+   <head>
+         <title>Restaurants</title>         
+   </head>
+   <body>
+   <H1>Restaurants</H1>
+   criteria: (<%=JSON.stringify(criteria)%>)<br>
+   Showing <%=restaurant.length %> documents<br>
+   
+   <a href="create"> <button type="submit">Create New Restaurant</button></a>
+   <% if (restaurant) {%>
+   <ul>
+   <% restaurant.forEach(function(restaurant){%>
+ 
+  
+   <li><a href="/restaurant?_id=<%=restaurant._id%>"> <%=restaurant.name %>  </a></li>
+   
+    <%})%>
+	</ul>
+   <%}%>
+   <a href="/search"><button>search</button></a>
+   
+   
+   
+	
+   </body>
+</html>

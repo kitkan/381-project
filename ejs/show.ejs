@@ -1,0 +1,33 @@
+<HTML>
+<BODY>
+
+
+<p>Borough: <%=restaurant.borough %></p>
+<p>Cuisine: <%=restaurant.cuisine %></p>
+<p>Street: <%=restaurant.street %></p>
+<p>Building: <%=restaurant.building %></p>
+<p>Zipcode: <%=restaurant.zipcode %></p>
+<p>GPS[lon,lat]:[<%=restaurant.lon%>,<%=restaurant.lat%>]</p>
+<p>rating:  <% if(restaurant.grades!=undefined){%>
+				   <ol>
+				  <% for(var i=0;i<restaurant.grades.length;i++){%>	 
+				  <li><%=restaurant.grades[i].score%>(<%=restaurant.grades[i].userid%>)</li>		  
+				  <%}%>
+				  </ol>
+				  <%}%></p>
+<p>Owner: <%=restaurant.owner%></p>
+
+  <a href="/map?lat=<%=restaurant.lat%>&lon=<%=restaurant.lon%>&title=<%=restaurant.name%>" >Google map</a><br>
+				  
+                  <a href="/rate?_id=<%=restaurant._id%>">Rate</a> 
+                  
+                  <a href="/modify?_id=<%=restaurant._id%>" >Edit</a>
+                  
+                  
+                     
+                  <a href="/remove?_id=<%=restaurant._id%>">Delete</a>
+				  <a href="/main" >Go back</a>
+   
+
+</BODY>
+</HTML>

@@ -1,0 +1,30 @@
+<html>
+<body>
+
+ <H2>Modify Restaurant <%= restaurant.name %></H2>
+<form method='post' action="/modify?_id=<%=restaurant._id%>">
+<p>Name:</p>
+<input type="text" name="name" value="<%=restaurant.name%>" required>
+<p>Borough: </p>
+<input type="text" name="borough" value="<%=restaurant.borough%>"><br>
+<p>Cuisine: </p>
+<input type="text" name="cuisine" value="<%=restaurant.cuisine%>" ><br>
+<p>Building: </p>
+<input type="text" name="building" value="<%=restaurant.building%>" ><br>
+<p>Street:</p> 
+<input type="text" name="street" value="<%=restaurant.street%>" ><br>
+<p>Zipcode:</p>
+<input type="text" name="zipcode" value="<%=restaurant.zipcode%>" ><br>
+<p>Lon:</p> 
+<input type="text" name="lon" value="<%=restaurant.lon%>" ><br>
+<p>Lat:</p>
+<input type="text" name="lat" value="<%=restaurant.lat%>" ><br>
+<button type="submit" value="Update">Update</button>
+</form>
+
+
+
+
+   
+</body>
+</html>
